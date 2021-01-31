@@ -56,8 +56,12 @@
 									<ul class="dropdown-menu" role="menu">
 										<li class="dropdown-header">Topics</li>
 										
-										<li class="active">
+										<li >
 											<a href="../../../topics/01-Module_Introduction/index.html">Module Introduction</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/02-Feature_Engineering/index.html">Feature Engineering</a>
 										</li>
 										
 									</ul>
@@ -78,15 +82,27 @@
 										<li class="dropdown-header">Resources</li>
 										
 										<li >
-											<a href="../../../topics/01-Module_Introduction/index.html#01-Module_Overview">Module Overview</a>
-										</li>
-										
-										<li class="active">
-											<a href="../../../topics/01-Module_Introduction/index.html#02-Practical_01_-_Review_of_Pandas_-_Tips">Practical 01 - Review of Pandas - Tips</a>
+											<a href="../../../topics/02-Feature_Engineering/index.html#01-Introduction_to_Feature_Engineering">Introduction to Feature Engineering</a>
 										</li>
 										
 										<li >
-											<a href="../../../topics/01-Module_Introduction/index.html#42-Additional_Resources">Additional Resources</a>
+											<a href="../../../topics/02-Feature_Engineering/index.html#02-Feature_Selection">Feature Selection</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Feature_Engineering/index.html#03-Automatic_Feature_Engineering">Automatic Feature Engineering</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Feature_Engineering/index.html#04-Dimensional_Reduction">Dimensional Reduction</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/02-Feature_Engineering/index.html#20-Practical_02_-_Feature_Engineering_-_Churn">Practical 02 - Feature Engineering - Churn</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Feature_Engineering/index.html#42-Additional_Resources">Additional Resources</a>
 										</li>
 										
 									</ul>
@@ -109,14 +125,6 @@
 											<a href="00-Outline.html">Outline</a>
 										</li>
 										
-										<li >
-											<a href="01-Software.html">Software</a>
-										</li>
-										
-										<li >
-											<a href="02-Data_Exploration.html">Data Exploration</a>
-										</li>
-										
 									</ul>
 								</li>
 							</ul>
@@ -137,27 +145,45 @@
 			
 			
 			
-			<li class="next"><a href="01-Software.html">Next (Software) &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a></li>
 			
 		</ul>
 		
-		<h1>Review of Pandas - Tips</h1>
-<p>In this practical we (you) are going to analyse a small dataset. The purpose of this practical is to ensure you are happy with both basic pandas operations and data mining process (EDA+classification) that were covered in <em>Data Mining 1</em> module.</p>
-<p>The aims of this lab session are:</p>
+		<h1>Feature Engineering - Churn</h1>
+<p>In this practical we will try to keep everything else fixed and focus on one single aspect of the data mining pipeline --- feature engineering, or more specifically feature extraction and feature selection. (Yes, I'm aware of the inconsistently between "single" and the use of "and". :-/)  </p>
+<p>You starting point is <a href="./files/03-Feature_Engineering_-_Churn.ipynb">the notebook</a> which:</p>
 <ul>
+<li>Loads the Churn dataset and performs basic cleaning and preparation (as we did in the previous practical).</li>
+<li>Creates a single feature. This feature is intentionally silly, it sole purpose is to illustrate the process.</li>
+<li>Specifies the desired metric - in this case, recall metric.</li>
+<li>Carries out training of a few classifiers.</li>
+<li>Applies automatic feature selection and replays model training using set of classifiers to obtain final metric.</li>
+</ul>
+<p>You job this week is to create new features to <strong>see if it is possible</strong> to find features to better explain the target and hopefully result in a better score (as defined in the notebook).</p>
+<p alert="alert" class="alert-warning">To keep this exercise as realistic as possible I'm not going to tell you which features will be of benefit, nor how much (if any) the chosen metric can be improved.</p>
+<p>Suggestions:</p>
+<ul>
+<li>Adding features related to <strong>State</strong> appear to be a good idea.</li>
+<li>I'm not saying that such features will improve the score. This is for you to determine.</li>
 <li>
-<p><a href="01-Software.html">Install / Verify a Suitable Python Environment</a><br/>
- You probably have a working python installation from last semester, but if not we will use a Python 3.8 distribution and all additional modules that will be used during this course have been tested to ensure no incompatibilities at this time.</p>
+<p>However, don't spend all your time adding <strong>State</strong> related features - it may have no effect in improving the <strong>recall</strong> metric.</p>
 </li>
 <li>
-<p><a href="02-Data_Exploration.html">Review of Basic Data Exploration Skills.</a><br/>
- We will take a small dataset based on records of server tips, and explore it using pandas.</p>
-</li>
-<li>
-<p><a href="02-Data_Exploration.html#Quiz">Develop Familiarity with Moodle, in Particular Moodle Activities (Quiz)</a><br/>
- To help direct your data exploration, mentioned above, we have a small Moodle quiz based on the server tips.  This quiz is formative (i.e., not summative) so does not contribute towards your overall grade. <br/><br/></p>
+<p>Best strategy is to develop multiple features using multiple lines of attack --- features that might seem plausible might not be of benefit when applied to the data.</p>
 </li>
 </ul>
+<p><strong>So don't get tunnel-vision and unnecessarily limit your options.</strong></p>
+<ul>
+<li>Don't spend too much time on this - the practical is not worth much. I considered setting the upload time to be end of practical but decided against this as I don't like benefiting "fast over correct" programming.</li>
+</ul>
+<h2>Submission</h2>
+<p>Upload to Moodle using the link below a zip file containing the notebook. Make sure:</p>
+<ul>
+<li>It is possible to execute all the cells in the notebook without manual intervention to change path/filenames/columns.</li>
+</ul>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3214678" role="button">Submit using Moodle</a>
+</div>
 		
 		<ul class="pager">
 			
@@ -165,7 +191,7 @@
 			
 			
 			
-			<li class="next"><a href="01-Software.html">Next (Software) &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a></li>
 			
 		</ul>
 
