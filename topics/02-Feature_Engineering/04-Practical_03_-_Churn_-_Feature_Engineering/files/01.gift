@@ -1,0 +1,230 @@
+
+///
+/// CATEGORY  : Graph Theory/Definitions
+/// CODE      : 01/01
+/// QUESTIONS : 001 -- 029
+///
+/// DATE      : Sun Jan 11 09:11:55 GMT 2009
+///
+
+$CATEGORY: Graph Theory/Definitions
+
+::Q-01/01/001::
+What is the largest degree in $$W_7$$?
+{
+	= 6
+}
+
+::Q-01/01/002::
+Does a simple graph with degree 
+sequence $$(3,3,5,5,5,5)$$ exist?
+{
+	= No
+		# Correct
+	~ Yes
+		# Try drawing the graph, there are too many vertices of degree 5.
+} 
+
+::Q-01/01/003::
+Does a simple graph with degree sequence $$(2,3,3,4,5,5)$$ exist?
+{
+	= No
+	~ Yes
+		# Correct
+} 
+
+::Q-01/01/004::
+Tick each of the following which may be degree sequences of simple graphs.
+{
+	~ $$(5, 5, 4, 4, 3, 2, 2, 1, 1)$$
+		# Check the sum of vertex degrees		
+	~ $$(6, 6, 6, 5, 3, 2, 2, 2)$$
+		# To many vertices of degree 6 when graph has 3 vertices of degree 2.		
+	~%50% $$(4, 4, 4, 4, 3, 3)$$
+	~ $$(7, 6, 5, 4, 3, 2, 1)$$
+		# Max degree in a simple graph of $$n$$ vertices is $$n-1$$.
+	~%50% $$(6, 5, 4, 3, 2, 2, 2, 2)$$
+} 
+
+::Q-01/01/005::
+Does a graph (simple or otherwise) with degree 
+sequence $$(1,1,2,3,3,5)$$ exist?
+{
+	= No
+		# Correct
+	~ Yes
+		# Check the sum of vertex degrees
+} 
+
+::Q-01/01/006::
+Does a simple graph with degree sequence $$(1,2,2,3,3,5)$$ exist?
+{
+	~ No
+		# Try drawing the graph, starting with the degree 5
+		vertex.
+	= Yes
+		# Correct
+} 
+
+::Q-01/01/007::
+Does a simple graph with degree sequence $$(3,3,3,3)$$ exist?
+{
+	~ No
+		# Check $$K_4$$
+	= Yes
+		# Correct
+} 
+
+::Q-01/01/008::
+Does a simple graph with degree sequence $$(4,4,4,4,6)$$ exist?
+{
+	= No
+		# Correct
+	~ Yes
+		# What is the max degree possible in a simple graph?
+} 
+
+::Q-01/01/009::
+Does a disconnected simple graph with 12 vertices and 11 edges 
+and no cycle exist?
+{
+	= No
+	~ Yes
+		# A disconnected graph of $$n$$ vertices and zero cycles 
+		has at most $$n-2$$ edges. 
+} 
+
+::Q-01/01/010::
+Does a disconnected simple graph with 10 vertices and 8 edges 
+exist?
+{
+	~ No
+	= Yes
+}
+
+::Q-01/01/011::
+How many different labelled simple graphs with 2 vertices exist?
+{
+	# 2
+}
+
+::Q-01/01/012::
+How many different labelled simple graphs with 3 vertices exist?
+{
+	# 8
+}
+
+::Q-01/01/013::
+How many different labelled simple graphs with 4 vertices exist?
+{
+	# 64
+}
+
+::Q-01/01/014::
+How many different labelled simple graphs with 5 vertices exist?
+{
+	# 1024
+}
+
+::Q-01/01/015::
+Let $$G$$ be a simple graph with $$n$$ vertices and $$m$$ edges,
+and let $$v$$ be a vertex in $$G$$ with degree $$k$$ and $$e$$ 
+be an edge in $$G$$.\n
+Match the three graph operations (on the left) with the size 
+of the resulting graph (on the right)
+{
+	=$$G-e$$ -> has n vertices and m-1 edges.
+	=$$G-v$$ -> has n-1 vertices and m-k edges.
+	=$$G\e$$ -> has n-1 vertices and m-1 edges.
+}
+
+::Q-01/01/016::
+How many edges has $$K_\{10\}$$, the complete graph with 10 vertices? 
+{
+	# 45
+}
+
+::Q-01/01/017::
+How many edges has the complete bipartite graph $$K_\{5,7\}$$ ?
+{ 
+	# 35
+}
+
+::Q-01/01/018::
+How many vertices has $$Q_3$$ ?
+{
+	# 8
+		# In $$Q_n$$ each vertex corresponds to a $$n$$-binary-digit number, 
+		so have exactly $$2^n$$ vertices.
+}
+
+::Q-01/01/019::
+How many vertices has $$Q_4$$ ?
+{
+	# 16
+		# In $$Q_n$$ each vertex corresponds to a $$n$$-binary-digit number, 
+		so have exactly $$2^n$$ vertices.
+}
+
+::Q-01/01/020::
+How many edges has the Peterson graph?
+{
+	# 15
+}
+
+::Q-01/01/021::
+How many edges has $$W_8$$, the Wheel graph with 8 vertices?
+{
+	# 14
+}
+
+::Q-01/01/022::
+Does a complete bipartite graph that is regular of degree 5 exist?
+{
+	~ No
+		# Check $$K_\{6,6\}$$
+	= Yes
+}
+
+::Q-01/01/023::
+Does a complete graph that is a wheel exist?
+{
+	~ No
+		# Compare $$W_4$$ to $$K_4$$
+	= Yes
+}
+
+::Q-01/01/024::
+Does a cubic graph with 11 vertices exist?
+{
+	= No
+	~ Yes
+		# Use the Handshaking Lemma
+}
+
+::Q-01/01/025::
+Does a cubic graph with 11 vertices exist?
+{
+	= No
+	~ Yes
+		# Use the Handshaking Lemma
+}
+
+::Q-01/01/026::
+How many edges does the complete bipartite graph, $$K_\{m,n\}$$, have?
+{
+	= m*n = mn = m n
+	= n*n = nm = n m 
+}
+
+::Q-01/01/027::
+How many vertices does the k-cube graph, $$Q_k$$, have?
+{
+	= 2^k
+}
+
+::Q-01/01/028::
+What is the degree of each vertex in $$Q_k$$?
+{
+	= k
+}
