@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Mining 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../style/codehilite/css/default.css" rel="stylesheet">
+    <link href="../../../style/misc/css/module.css" rel="stylesheet">
+    <link href="../../../style/misc/css/practical.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+  </head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			
+			
+	    	<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav navbar-left">
+					<!-- Moodle -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="https://moodle.wit.ie/course/view.php?id=171304" target="_blank"><img height="18pt" src="../../../style/misc/img/moodle_logo_on_blue.gif" /></a>
+						</div>						
+					</li>
+				</ul>
+
+	      		<ul class="nav navbar-nav navbar-right">
+
+					<!-- module home -->
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="../../../index.html"><span class="glyphicon glyphicon-home"></span></a>
+						</div>						
+					</li>
+					
+					<!-- topics -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-list-alt"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Topics</li>
+										
+										<li >
+											<a href="../../../topics/01-Module_Introduction/index.html">Module Introduction</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/02-Feature_Engineering/index.html">Feature Engineering</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/03-Model_Building/index.html">Model Building</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Hyperparameter_Tuning/index.html">Hyperparameter Tuning</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+
+					<!-- resources -->
+	        		<li>
+						<div class="navbar-collapse collapse" id="b">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="glyphicon glyphicon-th-list"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Resources</li>
+										
+										<li >
+											<a href="../../../topics/04-Hyperparameter_Tuning/index.html#01-Introduction_to_Hyperparameters">Introduction to Hyperparameters</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Hyperparameter_Tuning/index.html#02-Hyperparameter_Tuning">Hyperparameter Tuning</a>
+										</li>
+										
+										<li class="active">
+											<a href="../../../topics/04-Hyperparameter_Tuning/index.html#21-Practical_03_-_Churn_-_Hyperparameter_Tuning">Practical 03 - Churn - Hyperparameter Tuning</a>
+										</li>
+										
+										<li >
+											<a href="../../../topics/04-Hyperparameter_Tuning/index.html#42-Additional_Resources">Additional Resources</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li>
+								
+					<!-- pages-->
+	        		<li>
+						<div class="navbar-collapse collapse" id="c">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span>Outline</span
+									</a>
+									<ul class="dropdown-menu" role="menu">
+										
+										<li class="active">
+											<a href="00-Outline.html">Outline</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>			
+					</li> 
+					
+	        	</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="container">
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+		
+		<h1>Churn &mdash; Hyper-Parameter Tuning</h1>
+<p>This is a short practical in which the computer is doing most of the work (hopefully). </p>
+<p>We use the Churn dataset, focus on the hyper-parameter step only, and  we will try to build the best possible model (in terms of <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html">accuracy score</a>).</p>
+<h2>Assignment</h2>
+<h3>Get the notebook</h3>
+<p>Download the starting notebook <a href="./files/04-Churn_-_Hyperparameters.ipynb">04-Churn_-_Hyperparameters.ipynb</a> and open it in Jupyter / VS code. This notebook:</p>
+<ul>
+<li>Assumes existing project structure, and initial data cleaning was carried out (see previous lab).</li>
+<li>Performs data preprocessing (encoding as numeric, normalisation/scaling). </li>
+<li>Has demo of hyper-parameter tuning search (<a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html">GridSearchCV</a>) in a single classifier (<a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">LogicticRegression</a>).</li>
+<li>Evaluating of the fit, currently uses <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">LogicticRegression</a> with default values of the hyper-parameters. 
+ This model does not perform well (given that the dumb (always <code>Churn=False</code> would have an accuracy of 85.5%)).</li>
+</ul>
+<p>Using any (except SVC and neural networks) of the sklearn classifier models perform hyper-parameter tuning using </p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html">GridSearchCV</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html">RandomizedSearchCV</a></li>
+<li>(Optionally) <a href="https://github.com/hyperopt/hyperopt">hyperopt</a> and
+  <a href="https://github.com/hyperopt/hyperopt-sklearn">hyperopt-sklearn</a>.</li>
+</ul>
+<h3>Perform the search</h3>
+<p>In the notebook, I have included an example of a GridSearch on some hyper-parameters of the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">LogicticRegression</a> to demonstrate the process. Personally I would have a sequence of searches each having execution time of 10 minutes or less. </p>
+<p>As discussed in class, you do not want to run a search that is too large or is limited (in hyper-parameter selected, in specified parameter range, or in model type).  </p>
+<h3>Evaluate the optimal model</h3>
+<p>Finally run the typical evaluation on the <code>test</code> data. Our starting point is the<br />
+<a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">LogicticRegression</a>
+with default hyper-parameters. This module has classification report:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
+
+           <span class="mi">0</span>     <span class="mf">0.8766</span>    <span class="mf">0.9772</span>    <span class="mf">0.9242</span>      <span class="mi">1141</span>
+           <span class="mi">1</span>     <span class="mf">0.5806</span>    <span class="mf">0.1865</span>    <span class="mf">0.2824</span>       <span class="mi">193</span>
+
+    <span class="n">accuracy</span>                         <span class="mf">0.8628</span>      <span class="mi">1334</span>
+   <span class="n">macro</span> <span class="n">avg</span>     <span class="mf">0.7286</span>    <span class="mf">0.5819</span>    <span class="mf">0.6033</span>      <span class="mi">1334</span>
+<span class="n">weighted</span> <span class="n">avg</span>     <span class="mf">0.8338</span>    <span class="mf">0.8628</span>    <span class="mf">0.8313</span>      <span class="mi">1334</span>
+</code></pre></div>
+</td></tr></table>
+<p>and confusion matrix </p>
+<figure>
+  <img src="files/confusion_matrix.png" alt="" width="60%" >
+  <figcaption>Confusion matrix as a heat map.</figcaption>
+</figure>
+
+<p>So the model does not perform much better than the dumb (always predict <code>Churn=False</code>) model and in particular does poorly in identifying the minority class <code>Churn=True</code>. </p>
+<p>Hopefully your model does better.</p>
+<h3>Upload model</h3>
+<p>Upload your notebook (single file, no compression).</p>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=000000" role="button">Submit using Moodle</a>
+</div>
+		
+		<ul class="pager">
+			
+			<li class="previous disabled"><a>&larr; Previous</a></li>
+			
+			
+			
+			<li class="next disabled"><a>Next &rarr;</a></li>
+			
+		</ul>
+
+	</div>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
