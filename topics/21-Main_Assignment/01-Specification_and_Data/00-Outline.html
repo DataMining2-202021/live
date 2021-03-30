@@ -197,7 +197,7 @@
 </li>
 </ul>
 <div class="pager">
-<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=MOODLE_ACTIVITY_ID" role="button">Upload Notebook <code>Model.ipynb</code></a>
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3483647" role="button">Upload Notebook <code>Model.ipynb</code></a>
 </div>
 
 <h3>Deliverable <code>pred_accuracy.csv.gz</code></h3>
@@ -205,10 +205,18 @@
 <p>Before the assignment due date any submitted files will be grading using a subset (500) of the predictions. This is, a random subset of your 9,000 predictions will be compared with the true labels and scored using the 
 <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html">accuracy</a> score. </p>
 <p>After the assignment due date the entire file will be used when computing the accuracy score and the resulting grade.</p>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3483649" role="button">Upload predictions <code>pred_accuracy.csv.gz</code></a>
+</div>
+
 <h3>Deliverable <code>pred_roc_auc.csv.gz</code></h3>
 <p>This file is similar to <code>pred_accuracy.csv.gz</code>, except that the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">area under the roc curve</a> score is used to evaluate the model. </p>
 <p>Since this metric needs the probability of being in a class (via <code>predict_proba</code>) rather than the actual prediction (via <code>predict</code>), so CSV file should have (at least) a column called <code>pr_target</code> containing the probability of observation being in class 0.</p>
 <p class="alert alert-warning">Note: You don't have to use to same model when generating the predictions to maximise accuracy and when maximising roc_auc_score.</p>
+<div class="pager">
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3483650" role="button">Upload predictions <code>pred_roc_auc.csv.gz</code></a>
+</div>
+
 <h2>Building Optimal Models</h2>
 <p>We have covered (or at least referred to) all of the techniques that you will need to build a high performing model. However, to get a feeling as to what is possible the following is a list of articles, which cover techniques that people have used in varios competitions in the past. These article are not required to build a high performing model, but you might find that skimming these articles will help prompt you in various directions.  I'm more than happy then to help you figure out how to implement these ideas.</p>
 <ul>
