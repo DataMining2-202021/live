@@ -163,11 +163,19 @@
 <h2>Aim</h2>
 <p>Given</p>
 <ul>
-<li><a href="./files/labeled.csv.gz">labeled dataset</a> consisting 16,000 labeled observations, and</li>
-<li><a href="./files/scoring.csv.gz">scoring dataset</a> consisting of 9,000 unlabelled observations.</li>
+<li><a href="./files/labeled.csv.gz">labeled dataset</a> consisting 16,000 labeled observations, 166 features and a binary target (right-most column), and</li>
+<li><a href="./files/scoring.csv.gz">scoring dataset</a> consisting of 9,000 unlabelled observations (the 166 features only).</li>
 </ul>
 <p>you are asked to develop a classification model (or models) that predict the labels for the scoring dataset. Your model performance will be evaluated using two metrics: accuracy using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html">accuracy_score</a> and area under the roc curve using  <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">roc_auc_score</a>. </p>
-<p>This is a 100% data focused task so you get no context and most of the categorical variables have already been encoded using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html">OrdinalEncoder</a>.</p>
+<p>This is a 100% data-focused task so you get no context and </p>
+<ul>
+<li>most of the categorical variables have already been encoded using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html">OrdinalEncoder</a>. </li>
+<li>column labels have been removed. <ul>
+<li>in the <a href="./files/labeled.csv.gz">labeled dataset</a>, the rightmost column is the binary target.</li>
+<li>The <a href="./files/scoring.csv.gz">scoring dataset</a>, only contains the 166 features.</li>
+</ul>
+</li>
+</ul>
 <h2>Deliverables</h2>
 <p>You need to upload three files, these are uploaded separately</p>
 <ul>
@@ -197,7 +205,7 @@
 </li>
 </ul>
 <div class="pager">
-<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3483647" role="button">Upload Notebook <code>Model.ipynb</code></a>
+<a class="btn btn-primary btn-lg" target="_blank" href="https://moodle.wit.ie/mod/assign/view.php?id=3483647" role="button">Upload notebook <code>Model.ipynb</code></a>
 </div>
 
 <h3>Deliverable <code>pred_accuracy.csv.gz</code></h3>
